@@ -22,7 +22,7 @@ def callback():
     decoded = json.loads(json_line)
     user = decoded['originalDetactRequest']['payload']['data']['replyToken']
     userText = decoded['queryResult']['intent']['displayName']
-    sendTextuser,t(userText)
+    sendText(user,userText)
     return '',200
 
 def sendText(user, text):
